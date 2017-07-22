@@ -1,0 +1,13 @@
+.past-numbers {
+    width: 100%;
+    margin-top: 50px;
+    overflow: auto;  
+    text-align: center;
+}
+
+@media (min-width:550px) { 
+    /* big landscape tablets, laptops, and desktops */ 
+    .past-numbers {
+	    width: 550px;
+	}
+}
