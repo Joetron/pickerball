@@ -5,9 +5,9 @@
 
 ## Purpose
 
-Pickerball is a refactor of an older React app. This version is updated to use creat-react-app, react-redux, react-router, react-boostrap, es6 syntax, and the Google App Engine (the original used Microsoft Azure).
+Pickerball is a refactor of an older React app. This version is updated to use creat-react-app, react-redux, react-router, react-boostrap, es6 syntax, axios, and redux-promise. The Google App Engine is used for the back end(the original used Microsoft Azure). I've found the Google App Engine very convenient for building out simple back end endpoints and it is free if you do not go beyond your quota. 
 
-This app is an experiment in responsive design, as well as experimenting in creation of a full stack framework level app using modern technologies. There have been some lessons learned already and even at this point it could use some refactoring. However, I plan to apply most of my lessons learned to my next app, which will be a generic framework level app that can be used for various other projects. The next app will also go back to implementing unit tests, which were bypassed this time so I could have more time for exploration.
+This app is an experiment using the technologies listed above. Unit tests have been left out for now due to the amount of refactoring involved due to the learning process.
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
@@ -15,16 +15,20 @@ The API_KEY for the back end has permission only for my sites.
 
 ## Pickerball
 
-Pickerball is designed to allow users to choose Powerball numbers using various algorithms. At the time I created the original app, Powerball was at an all time high.
+Pickerball is designed to allow users to choose Powerball numbers using various algorithms. 
 
-The original algorithm I used was a gap algorithm that bases the picks on what you would normally expect for the lowest to highest gap size to be between picks. It does not increase the odds of winning, it just gives the user a choice of how to pick I personally would never choose 1, 2, 3, 4, 5 as my numbere even though the odds of winning are the same.
+The gap algorithm bases the picks on the average gap size for the lowest to highest gaps between picks. Randomness is added by arranging the gaps in random order, as well as applying randomness to the gap lengths based off of their standard deviation (it is all done on the back end).  
+
+The random algorithm will use random numbers from random.org, currently this is not implemente yet and it just uses the Java Random class. When implemented it will be on the back end and no update here will be needed.
+
+Other pick generator algorithms that may be added are; hot or cold numbers, mean numbers, modal numbers, lucky numbers, etc...
 
 The backend provides the endpoints for generating picks based on the algorithm. The backend will be updated to do nightly tasks to retrieve random numbers from random.org as well as biweekly tasks to retrieve new Powerball numbers and update the data used for the number generators.
 
 This app is a work in progress, not all features are currently implemented.
 
 Work that needs to be done:
-* Back end tasks for retrieving past numbers and random numbers
-* Back end endpoints refactored to use data from tasks
-* Front end logic filter for start and end date
+* Label for currenr generator and count.
+* Refactor page design, perhaps use BootStrap OffCanvas for the sidebar, at the very least try to make the body position itself better so it is not under the sidebar when it does not have to be.
+* Homepage, use current Homepage as Generator page
 * Stats component (not even sure what I am putting in here yet, but I would like to use d3)
