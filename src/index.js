@@ -6,7 +6,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import registerServiceWorker from './registerServiceWorker';
 import { ConnectedRouter, routerMiddleware } from 'react-router-redux';
-import createHistory from 'history/createBrowserHistory';
+import createHistory from 'history/createHashHistory';
 import App from './App';
 import rootReducer from './reducers';
 import './index.css';

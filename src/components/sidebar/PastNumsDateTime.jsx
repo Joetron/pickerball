@@ -9,6 +9,6 @@ export default ({ value, validator, onChange }) => (
 		isValidDate={ validator }
 		onChange= { onChange }
 		inputProps={ { onChange: ()=> {} } } 
-		closeOnSelect="true"
+		closeOnSelect={ true }
 	/>
 );
