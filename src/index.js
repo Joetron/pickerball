@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
-import thunkMiddleware from 'redux-thunk';
+//import thunkMiddleware from 'redux-thunk';
+import reduxPromise from 'redux-promise';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import registerServiceWorker from './registerServiceWorker';
@@ -13,7 +14,7 @@ import './index.css';
 export const history = createHistory();
 
 const middleware = [
-	thunkMiddleware,
+	reduxPromise, //thunkMiddleware,
 	routerMiddleware(history)
 ];
 

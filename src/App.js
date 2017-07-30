@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import PickerBallApp from './components/PickerBallApp.jsx';
 import './App.css';
-import { loadWinNums } from './apiServices/PickerBallApi.js';
-import { updateWinningNumbers } from './actions';
+import { initPastNumbers } from './actions';
 import { store } from './index.js';
 
 
@@ -11,10 +10,8 @@ class App extends Component {
 	constructor(props) {
 		super(props);
 
-		loadWinNums().then(
-			response => response.json().then(
-				json => store.dispatch(updateWinningNumbers(json.items))
-		));
+		// TODO: Technically we would want to use a container and action for this
+		store.dispatch(initPastNumbers());
 	}
 
 	render() {

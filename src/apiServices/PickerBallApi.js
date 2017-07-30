@@ -1,13 +1,14 @@
 import fetch from 'isomorphic-fetch';
 
-// TODO: remove prior to GitHub
-const apiUrl = 'https://pickerballapi.appspot.com/_ah/api/numbers/v1/';
-const apiQueryKey = '?key=AIzaSyD5pKid4o5FxY48VKNxzjrSySMHE1IUh0E';
 
-const randomMethodUrl = apiUrl + 'random_picks' + apiQueryKey;
-const gapMethodUrl = apiUrl + 'gap_picks' + apiQueryKey;
+// These are only available for my domains (including Github pages)
+const ROOT_URL = 'https://pickerballapi.appspot.com/_ah/api/numbers/v1/';
+const API_QUERY_KEY = '?key=AIzaSyD5pKid4o5FxY48VKNxzjrSySMHE1IUh0E';
 
-const winningNumsRequest = new Request(apiUrl + 'winnums' + apiQueryKey);
+const randomMethodUrl = `${ROOT_URL}random_picks${API_QUERY_KEY}`;
+const gapMethodUrl = `${ROOT_URL}gap_picks${API_QUERY_KEY}`;
+
+const winningNumsRequest = new Request(`${ROOT_URL}winnums${API_QUERY_KEY}`);
 
 export const loadRandomPicks = (count) => {
 	const requestBody = JSON.stringify({count});

@@ -2,7 +2,7 @@ import React from 'react';
 import { Table } from 'react-bootstrap';
 import '../../css/past-numbers.css';
 
-export default ({ weeklyPicks }) => (
+export default ({ pastNumbers }) => (
 	<div className="past-numbers">
 		<Table striped bordered condensed hover>
 		    <thead>
@@ -18,7 +18,7 @@ export default ({ weeklyPicks }) => (
 		      </tr>
 		    </thead>
 			<tbody>
-				{ weeklyPicks.map((pick, i) => 
+				{ pastNumbers.map((pick, i) => 
 					<tr key={ i + 'past-num' }>
 						<td>{ pick.Date }</td>
 						<td>{ pick.WB1 }</td>

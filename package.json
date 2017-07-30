@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.16.2",
     "classnames": "^2.2.5",
     "history": "^4.6.3",
     "moment": "^2.18.1",
@@ -15,6 +16,7 @@
     "react-router-dom": "^4.1.1",
     "react-router-redux": "next",
     "redux": "^3.7.1",
+    "redux-promise": "^0.5.3",
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {

@@ -8,7 +8,9 @@ import '../../css/sidebar.css';
 export default ({ css }) => (
 	<div className={ css + " sidebar bg-primary"}>
 		<Route exact path="/" component={ GeneratorSidebar }/>
-		<Route exact path="/stats" component={ StatsSidebar }/>
+		
 		<Route exact path="/winningnums" component={ PastNumbersSidebar }/>
 	</div>	
 );
+
+//<Route exact path="/stats" component={ StatsSidebar }/>

@@ -24,12 +24,14 @@ export default ({ onMenuClick, onHomeSelected, onStatsSelected, onWeeklyNumsSele
             <Button bsSize="large" bsStyle="primary" onClick={ onHomeSelected } title="Home">
                 <Glyphicon glyph="home" />
             </Button>
-            <Button bsSize="large" bsStyle="primary" onClick={ onStatsSelected } title="Stats">
-                <Glyphicon glyph="stats" />
-            </Button>
             <Button bsSize="large" bsStyle="primary" onClick={ onWeeklyNumsSelected } title="Past Numbers">
                 <Glyphicon glyph="calendar" />
             </Button>
         </ButtonGroup>
   </div>
 );
+
+
+            // <Button bsSize="large" bsStyle="primary" onClick={ onStatsSelected } title="Stats">
+            //     <Glyphicon glyph="stats" />
+            // </Button>

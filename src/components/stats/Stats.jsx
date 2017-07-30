@@ -1,6 +1,6 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
-import '../../css/weekly-picks.css';
+import '../../css/past-numbers.css';
 
 // statistics:
 // median 1st pick -> 6th
@@ -12,7 +12,7 @@ import '../../css/weekly-picks.css';
 // hot numbers (N weeks)
 // cold numbers (N weeks)
 export default ({ stats }) => (
-	<div className="weekly-picks">
+	<div className="past-numbers">
 		<Table striped bordered condensed hover>
 		    <thead>
 		      <tr>

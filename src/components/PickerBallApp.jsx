@@ -15,9 +15,11 @@ export default () => (
 	        	<Sidebar />
 	        </div>
 	        <Route exact path="/" component={ Generator }/>
-		    <Route path="/stats" component={ Stats }/>
+		    
 		    <Route path="/winningnums" component={ PastNumbers }/>
 		    <div className="side" />
 	    </div>
 	</div>
 );
+
+//<Route path="/stats" component={ Stats }/>

@@ -32,7 +32,8 @@ export default function generatorReducer(state = initialState, action) {
 		case FETCHING_PICKS:
 			return Object.assign({}, state, { isFetching: true });
 		case UPDATE_PICKS:
-			return Object.assign({}, state, { picks: action.picks, isFetching: false });
+		console.log(action.payload);
+			return Object.assign({}, state, { picks: action.payload.data.items, isFetching: false });
 		case UPDATE_ALGORITHM:
 			return Object.assign({}, state, { algorithm: action.algorithm });
 		case UPDATE_COUNT:
