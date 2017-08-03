@@ -11,10 +11,10 @@ const mapStateToProps = state => {
 	};
 };
 
-const mapDispatchToProps = (dispatch, ownProps) => {
+const mapDispatchToProps = dispatch => {
 	return {
 		onLoadPicks: (algorithm, count) => dispatch(loadPicks(algorithm, count)),
-		onUpdateAlgorithm: (algorithm) => dispatch(updateAlgorithm(algorithm)), // TODO: create component for menuitems
+		onUpdateAlgorithm: (algorithm) => dispatch(updateAlgorithm(algorithm)),
 		onUpdateCount: (count) => dispatch(updateCount(count))
 	}
 };

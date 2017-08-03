@@ -1,35 +1,19 @@
-.sidebar {
+.pb-sidebar {
 	/* Overlap at phone width, with menu-button to open and close */
-	position: absolute;
 	height: 100%;
-	transition: left 0.25s;
 	display: flex;
 	padding: 20px;
-	width: 250px;
-	left: 0px;
-}
-
-.sb-label {
-	color: black;
-}
-
-.pb-options {
-	display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    color: #fff;
-}
-
-.sidebar-open {  }
-
-.options {
-	display: flex;
-	flex-direction: column;
 	width: 100%;
 }
 
-.sidebar-collapsed {
-	left: -250px;
+.pb-sidebar-label {
+	color: black;
+}
+
+.pb-sidebar-items {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
 }
 
 .loading:after {
@@ -62,19 +46,4 @@ form input:hover {
 form div {
 	padding: 5px;
 	display: flex;
-}
-
-@media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ }
-@media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ }
-@media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
-@media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
-
-@media (min-width:1025px) { 
-	/* big landscape tablets, laptops, and desktops */ 
-	.sidebar-collapsed {
-        left: 0px;
-    }
-}
-@media (min-width:1281px) { 
-	/* hi-res laptops and desktops */ 
 }

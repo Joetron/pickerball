@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Generator from '../components/generator/Generator.jsx';
+import Generator from '../components/content/Generator.jsx';
 
 const mapStateToProps = state => {
 	return {

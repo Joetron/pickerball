@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import moment from 'moment';
-import PastNumbers from '../components/past_numbers/PastNumbers.jsx';
+import PastNumbers from '../components/content/PastNumbers.jsx';
+import { initPastNumbers } from '../actions'; 
 
 const mapStateToProps = state => {
 	const pastNumbers = state.pastNumsReducer.pastNumbers;
@@ -23,6 +24,13 @@ const mapStateToProps = state => {
 	};
 };
 
+const mapDispatchToProps = dispatch => {
+	return { 
+		onLoad: () => dispatch(initPastNumbers()) 
+	};
+}
+
 export default connect(
-	mapStateToProps
+	mapStateToProps,
+	mapDispatchToProps
 )(PastNumbers);

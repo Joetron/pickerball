@@ -35,9 +35,9 @@ export default class PastNumbersSidebar extends Component {
 
 	render () {
 		return (
-			<div className="options">
+			<div className="pb-sidebar-items">
 				<Panel>
-					<span className="sb-label">Start Date</span>
+					<span className="pb-sidebar-label">Start Date</span>
 					<PastNumsDateTime 
 						onChange={ this.onStartDateChange } 
 						value={ this.props.startDate } 
@@ -46,7 +46,7 @@ export default class PastNumbersSidebar extends Component {
 				</Panel>
 
 				<Panel>
-					<span className="sb-label">End Date</span>
+					<span className="pb-sidebar-label">End Date</span>
 					<PastNumsDateTime 
 						onChange={ this.onEndDateChange } 
 						value={ this.props.endDate } 

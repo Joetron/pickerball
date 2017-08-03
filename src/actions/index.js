@@ -1,9 +1,10 @@
-import { loadRandomPicks, loadGapPicks } from '../apiServices/PickerBallApi.js';
+//import { loadRandomPicks, loadGapPicks } from '../apiServices/PickerBallApi.js';
 import axios from 'axios';
 import { store } from '../index.js';
 
 const ROOT_URL = 'https://pickerballapi.appspot.com/_ah/api/numbers/v1/';
-const API_QUERY_KEY = '?key=AIzaSyD5pKid4o5FxY48VKNxzjrSySMHE1IUh0E';
+//const API_QUERY_KEY = '?key=AIzaSyD5pKid4o5FxY48VKNxzjrSySMHE1IUh0E';
+const API_QUERY_KEY = '?key= AIzaSyBLzOWUc1XF6OK5TBRYb8RqVO1xrjKilCE';// TODO: revert
 
 const randomMethodUrl = `${ROOT_URL}random_picks${API_QUERY_KEY}`;
 const gapMethodUrl = `${ROOT_URL}gap_picks${API_QUERY_KEY}`;
@@ -62,25 +63,6 @@ export const loadPicks = (algorithm, count) => {
 		payload: axios.post(randomMethodUrl, {count}, CONFIG)
 	};
 };
-
-// Thunk version
-// export const loadPicks = (algorithm, count) => dispatch => {
-// 	dispatch(fetchingPicks());
-
-// 	const request = axios.get(pastNumsUrl, HEADERS);
-
-// 	if (algorithm === "GAP_ALIGN") {
-// 		return loadGapPicks(count).then(
-// 			response => response.json().then(
-// 				json => dispatch(updatePicks(json.items))
-// 		));
-// 	}
-
-// 	return loadRandomPicks(count).then(
-// 		response => response.json().then(
-// 			json => dispatch(updatePicks(json.items))
-// 	));
-// };
 
 export const updatePicks = (picks) => {
 	return {

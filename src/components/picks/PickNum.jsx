@@ -1,9 +1,9 @@
 import React from 'react';
 import classNames from 'classnames';
-import '../../css/pick.css';
+import '../../css/picks.css';
 
-export default ({ pickNum, color, title, size }) => (
-    <span title={ title } className={ classNames("pick-num", color, size) }>
+export default ({ pickNum, color, title }) => (
+    <span title={ title } className={ classNames("pick-col", color) }>
         { pickNum }
     </span>
 );

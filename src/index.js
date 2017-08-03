@@ -1,20 +1,19 @@
 import React from 'react';
 import { render } from 'react-dom';
-//import thunkMiddleware from 'redux-thunk';
 import reduxPromise from 'redux-promise';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import registerServiceWorker from './registerServiceWorker';
 import { ConnectedRouter, routerMiddleware } from 'react-router-redux';
-import createHistory from 'history/createHashHistory';
-import App from './App';
+import createHistory from 'history/createBrowserHistory';
+import PickerBallApp from './containers/PickerBallApp';
 import rootReducer from './reducers';
 import './index.css';
 
 export const history = createHistory();
 
 const middleware = [
-	reduxPromise, //thunkMiddleware,
+	reduxPromise,
 	routerMiddleware(history)
 ];
 
@@ -27,7 +26,7 @@ export const store = createStore(
 render(
 	<Provider store={ store }>
 		<ConnectedRouter history={ history }>
-			<App />
+			<PickerBallApp />
 		</ConnectedRouter>
 	</Provider>,
 	document.getElementById('root')

@@ -2,7 +2,7 @@ import React from 'react';
 import { Panel, DropdownButton, MenuItem, ButtonGroup, Button } from 'react-bootstrap';
 
 export default ({ isLoading, onLoadPicks, onUpdateCount, onUpdateAlgorithm, algorithm, count }) => (
-	<div className="options">
+	<div className="pb-sidebar-items">
 		<Panel>
 			<ButtonGroup vertical block>
 			    <Button  
@@ -17,7 +17,7 @@ export default ({ isLoading, onLoadPicks, onUpdateCount, onUpdateAlgorithm, algo
 
 		<Panel>
 		<ButtonGroup vertical block>
-			<DropdownButton block title="Options" id="alg-dropdown" onSelect={ onUpdateAlgorithm } >
+			<DropdownButton block title="Algorithm" id="alg-dropdown" onSelect={ onUpdateAlgorithm } >
 				<MenuItem active={ algorithm === "RANDOM" } eventKey="RANDOM">Random</MenuItem>
 				<MenuItem active={ algorithm === "GAP_ALIGN" } eventKey="GAP_ALIGN">Gap</MenuItem>
 			</DropdownButton>

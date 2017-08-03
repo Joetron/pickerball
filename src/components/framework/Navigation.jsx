@@ -1,19 +1,21 @@
 import React from 'react';
 import { ButtonGroup, Button, Glyphicon } from 'react-bootstrap';
 import PickNum from '../picks/PickNum.jsx';
-import '../../css/banner.css';
+import '../../css/navigation.css';
 
-export default ({ onMenuClick, onHomeSelected, onStatsSelected, onWeeklyNumsSelected }) => (
-    <div title="PickerBall Powerball Picker" className="banner bg-primary">
+export default ({ onMenuClick, onHomeClick, onPastNumsClick }) => (
+    <div title="PickerBall Powerball Picker" className="pb-navigation">
 
-        <ButtonGroup bsClass="menu-icon">
+        <ButtonGroup bsClass="pb-menu-icon">
             <Button bsSize="large" bsStyle="primary" title="Menu" onClick={ onMenuClick }>
                 <Glyphicon glyph="menu-hamburger" />
             </Button>
         </ButtonGroup>
 
-        <div className="App-logo">
-            <PickNum pickNum="PB" color="red" size="size-small" title="Powerball Logo" />
+        <div className="pb-logo">
+            <span title="Powerball Logo">
+                PB
+            </span>
         </div>
 
         <span className="pb-header">Pickerball</span>
@@ -21,14 +23,14 @@ export default ({ onMenuClick, onHomeSelected, onStatsSelected, onWeeklyNumsSele
         <div className="spacer" />
 
         <ButtonGroup>           
-            <Button bsSize="large" bsStyle="primary" onClick={ onHomeSelected } title="Home">
+            <Button bsSize="large" bsStyle="primary" onClick={ onHomeClick } title="Home">
                 <Glyphicon glyph="home" />
             </Button>
-            <Button bsSize="large" bsStyle="primary" onClick={ onWeeklyNumsSelected } title="Past Numbers">
+            <Button bsSize="large" bsStyle="primary" onClick={ onPastNumsClick } title="Past Numbers">
                 <Glyphicon glyph="calendar" />
             </Button>
         </ButtonGroup>
-  </div>
+    </div>
 );
 
 

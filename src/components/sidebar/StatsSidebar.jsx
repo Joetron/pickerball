@@ -2,7 +2,7 @@ import React from 'react';
 import { Panel, ButtonGroup, Button } from 'react-bootstrap';
 
 export default () => (
-	<div className="options">
+	<div className="pb-sidebar-items">
 		<Panel>
 			<ButtonGroup vertical block>
 			    <Button onClick={ () => {  } }>

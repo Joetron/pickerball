@@ -9,8 +9,7 @@ const picks = [
     [1, 3, 5, 7, 9, 13],
     [2, 4, 6, 8, 10, 14],
     [3, 6, 9, 12, 15, 12],
-    [5, 15, 25, 35, 45, 15],
-    [7, 14, 21, 28, 35, 21]
+    [5, 15, 25, 35, 45, 15]
 ];
 
 const Algorithm = {
@@ -23,7 +22,7 @@ const initialState = {
     picks,
     sidebarOpen: true,
     algorithm: Algorithm.RANDOM,
-    count: "6",
+    count: "4",
     pastNumbers: []
 };
 
@@ -32,7 +31,6 @@ export default function generatorReducer(state = initialState, action) {
 		case FETCHING_PICKS:
 			return Object.assign({}, state, { isFetching: true });
 		case UPDATE_PICKS:
-		console.log(action.payload);
 			return Object.assign({}, state, { picks: action.payload.data.items, isFetching: false });
 		case UPDATE_ALGORITHM:
 			return Object.assign({}, state, { algorithm: action.algorithm });
